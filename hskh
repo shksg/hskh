@@ -13,7 +13,7 @@ def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="مرحبًا، أنا بوت الأغاني!")
 
 # تكوين البوت والمسجل
-updater = Updater(token=Token , use_context=True)
+updater = Updater(token=TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
 # تعيين معالج الأمر /start
@@ -22,3 +22,4 @@ dispatcher.add_handler(start_handler)
 
 # تشغيل البوت
 updater.start_polling()
+updater.idle()
